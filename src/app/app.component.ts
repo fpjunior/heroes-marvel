@@ -8,12 +8,14 @@ import { ServiceService } from './service.service';
 })
 export class AppComponent implements OnInit {
   title = 'heroes-marvel';
+  items!: any[]
 
   constructor(private service: ServiceService) { }
 
 
   ngOnInit(): void {
-    this.teste()
+    this.teste();
+    this.items=[];
   }
 
   teste() {
