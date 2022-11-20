@@ -9,6 +9,8 @@ import { AccordionModule } from 'primeng/accordion';
 import { InputMaskModule } from 'primeng/inputmask';
 import { CalendarModule } from 'primeng/calendar';
 import { InputTextModule } from 'primeng/inputtext';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -22,6 +24,7 @@ import { InputTextModule } from 'primeng/inputtext';
     InputMaskModule,
     CalendarModule,
     InputTextModule,
+    FormsModule
 
   ],
   providers: [],
