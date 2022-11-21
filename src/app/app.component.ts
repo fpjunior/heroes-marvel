@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ServiceService } from './service.service';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,24 +6,10 @@ import { ServiceService } from './service.service';
 })
 export class AppComponent implements OnInit {
   title = 'heroes-marvel';
-  items!: any[]
 
-  constructor(private service: ServiceService) { }
-
+  constructor() { }
 
   ngOnInit(): void {
-    this.teste();
-    this.items=[];
+
   }
-
-  teste() {
-    this.service.getMusic().subscribe(
-      (result) => {
-        console.log(result)
-       },
-      (error) => { },
-    )
-  }
-
-
 }

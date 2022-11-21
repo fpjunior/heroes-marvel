@@ -20,11 +20,6 @@ import {MenubarModule} from 'primeng/menubar';
     BrowserModule,
     HttpClientModule,
     AccordionModule,
-    InputMaskModule,
-    CalendarModule,
-    InputTextModule,
-    MenubarModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]
