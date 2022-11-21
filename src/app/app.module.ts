@@ -9,7 +9,6 @@ import { AccordionModule } from 'primeng/accordion';
 import { InputMaskModule } from 'primeng/inputmask';
 import { CalendarModule } from 'primeng/calendar';
 import { InputTextModule } from 'primeng/inputtext';
-import {MenubarModule} from 'primeng/menubar';
 
 
 @NgModule({
@@ -23,7 +22,6 @@ import {MenubarModule} from 'primeng/menubar';
     InputMaskModule,
     CalendarModule,
     InputTextModule,
-    MenubarModule,
 
   ],
   providers: [],
