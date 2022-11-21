@@ -9,7 +9,7 @@ import { AccordionModule } from 'primeng/accordion';
 import { InputMaskModule } from 'primeng/inputmask';
 import { CalendarModule } from 'primeng/calendar';
 import { InputTextModule } from 'primeng/inputtext';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { InputTextModule } from 'primeng/inputtext';
     InputMaskModule,
     CalendarModule,
     InputTextModule,
-
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
