@@ -1,13 +1,31 @@
+<!-- <header class="mdn-Header mdn-Header--simple">
+  <div class="mdn-Container">
+     <div class="mdn-Header--simple-content">
+        <a href="/">
+           <img class="mdn-logoSvg" src="https://mondrian.claro.com.br/brands/horizontal/inverse/claro.svg"
+              alt="Logo da Claro">
+        </a>
+     </div>
+  </div>
+</header> -->
 
+<p-menubar [model]="items">
+  <ng-template pTemplate="start">
+      <img src="assets/img/logo-mv.svg.png" alt height="40" class="mr-2">
+  </ng-template>
+  <ng-template pTemplate="end">
+      <input type="text" pInputText placeholder="Search">
+      <p-autoComplete [(ngModel)]="text" [showEmptyMessage]="true" [suggestions]="results" (completeMethod)="search($event)" field="name" [minLength]="3"></p-autoComplete>
+      <!-- <p-autoComplete [(ngModel)]="text" [suggestions]="results" (completeMethod)="search($event)"></p-autoComplete> -->
+   </ng-template>
+</p-menubar>
+<!-- {{results | json}} -->
+<!-- {{imageHeroe}} -->
+<div *ngIf="imageHeroe">
 
-<input type="text" pInputText /> <br><br>
+  <p-image [src]="imageHeroe" alt="thumbnail" width="250"  [preview]="true"></p-image>
 
-
-<p-button label="Click" icon="pi pi-check" iconPos="left"></p-button>
-
-
-<div>
-  <dialog>
-
-  </dialog>
 </div>
+
+
+

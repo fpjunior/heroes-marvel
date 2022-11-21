@@ -18,4 +18,8 @@ export class ServiceService {
     return this.http.get(`https://gateway.marvel.com:443/v1/public/characters?ts=1&orderBy=name&limit=10&apikey=3579a66ac3ace7cef9476ce2d5f8030e&hash=${this.hash}`)
   }
 
+
+  getHeroesByName(nameHeroe: string){
+    return this.http.get(`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${nameHeroe}&ts=1&orderBy=name&limit=10&apikey=3579a66ac3ace7cef9476ce2d5f8030e&hash=${this.hash}`)
+  }
 }
