@@ -6,8 +6,8 @@ import { AccordionModule } from 'primeng/accordion';
 import { InputMaskModule } from 'primeng/inputmask';
 import { CalendarModule } from 'primeng/calendar';
 import { InputTextModule } from 'primeng/inputtext';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import {MenubarModule} from 'primeng/menubar';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -19,10 +19,9 @@ import { FormsModule } from '@angular/forms';
     InputMaskModule,
     CalendarModule,
     InputTextModule,
-    BrowserAnimationsModule,
-    FormsModule
+    MenubarModule,
+
   ],
   providers: [],
-  bootstrap: [AppComponent]
 })
 export class AppModule { }
