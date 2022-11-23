@@ -10,6 +10,8 @@ export class AppComponent implements OnInit {
   title = 'heroes-marvel';
   items!: any[];
   imageHeroe!: string;
+  heroeName!: string;
+  descriptionName!: string;
 
   text!: any[];
   results!: any[];
@@ -18,36 +20,25 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.items = [
-
-  ];
-
-    this.teste()
+    ];
   }
 
-  search(event: any) {
- const IMAGE_SIZE: string = 'standard_fantastic'
+  findHeroe(event: any) {
 
     this.service.getHeroesByName(event?.query).subscribe(
-      (data: any)=>{
+      (data: any) => {
         this.results = data.data.results;
-        this.imageHeroe = `${this.results[0].thumbnail.path}/${IMAGE_SIZE}.jpg`
         console.log(this.results)
       },
-      ()=>{}
-    )
-
-}
-
-
-
-  teste() {
-    this.service.getMusic().subscribe(
-      (result) => {
-        console.log(result)
-       },
-      (error) => { },
+      () => { }
     )
   }
 
+  selectHeroe(event: any) {
+    const IMAGE_SIZE: string = 'standard_fantastic'
+    this.imageHeroe = `${this.results[0].thumbnail.path}/${IMAGE_SIZE}.jpg`
+    this.heroeName = event.name
+    this.descriptionName = event.description
+  }
 
 }

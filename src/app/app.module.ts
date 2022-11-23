@@ -15,6 +15,7 @@ import {MenubarModule} from 'primeng/menubar';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ImageModule} from 'primeng/image';
+import {PanelModule} from 'primeng/panel';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {ImageModule} from 'primeng/image';
     MenubarModule,
     AutoCompleteModule,
     BrowserAnimationsModule,
-    ImageModule
+    ImageModule,
+    PanelModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
