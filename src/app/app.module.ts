@@ -8,6 +8,8 @@ import { CalendarModule } from 'primeng/calendar';
 import { InputTextModule } from 'primeng/inputtext';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { AutoCompleteModule } from 'primeng/autocomplete';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -20,6 +22,7 @@ import { FormsModule } from '@angular/forms';
     CalendarModule,
     InputTextModule,
     BrowserAnimationsModule,
+    AutoCompleteModule,
     FormsModule
   ],
   providers: [],
