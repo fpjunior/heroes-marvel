@@ -9,6 +9,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import {MenubarModule} from 'primeng/menubar';
 
 @NgModule({
+  bootstrap: [ AppComponent ],
   declarations: [
     AppComponent
   ],
