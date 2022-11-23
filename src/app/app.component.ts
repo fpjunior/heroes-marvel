@@ -9,34 +9,59 @@ import { ServiceService } from './service.service';
 export class AppComponent implements OnInit {
   title = 'heroes-marvel';
   result: any;
-  text: string= "";
+  text: any;
+  heroName: string="";
+  heroDescription: string="";
+  imgHero: string="";
+  sizeImg: string= "standard_fantastic";
+
 
   constructor(private service: ServiceService) { }
 
 
   ngOnInit(): void {
-    this.teste();
+    // this.teste();
   }
 
-  teste() {
-    this.service.getMusic().subscribe(
-      (result) => {
-        console.log(result)
-       },
-      (error) => { },
-    )
-  }
+  // teste() {
+  //   this.service.getMusic().subscribe(
+  //     (result) => {
+  //       console.log(result)
+  //      },
+  //     (error) => { },
+  //   )
+  // }
 
   searchHero(event:any) {
-    var hero: string;
+    let hero: string;
     hero= event.query;
     this.service.getSearchHeros(hero).subscribe(
       (result) => {
         this.result= result.data.results;
-        console.log(this.result);
        },
       (error) => { },
     )
+  }
+
+  selectHero(){
+    let cont=0;
+    let img;
+    let extension;
+    for(let i = 0; i < 10; i++){
+      if(this.result[i].name == this.text.name){
+        cont= i;
+        i= 10;
+      }
+    }
+    // console.log(this.result[cont]);
+    this.heroName= this.result[cont].name;
+    this.heroDescription= this.result[cont].description;
+    img= this.result[cont].thumbnail.path;
+    extension= this.result[cont].thumbnail.extension;
+    this.imgHero= img + '/' + this.sizeImg + '.' + extension;
+    console.log(this.heroName);
+    console.log(this.heroDescription);
+    console.log(this.imgHero);
   }
 
 
