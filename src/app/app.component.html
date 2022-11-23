@@ -1,10 +1,6 @@
 
-
-<input type="text" pInputText /> <br><br>
-
-
-<p-button label="Click" icon="pi pi-check" iconPos="left"></p-button>
 <p-autoComplete [(ngModel)]="text" [showEmptyMessage]="true" [minLength]="3" field="name" [suggestions]="result" (completeMethod)="searchHero($event)"></p-autoComplete>
+<p-button label="Click" icon="pi pi-check" iconPos="left"></p-button>
 
 <div>
   <dialog>
