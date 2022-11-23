@@ -9,8 +9,10 @@ import { InputTextModule } from 'primeng/inputtext';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { AutoCompleteModule } from 'primeng/autocomplete';
+import {MenubarModule} from 'primeng/menubar';
 
 @NgModule({
+  bootstrap: [ AppComponent ],
   declarations: [
     AppComponent
   ],
@@ -23,9 +25,10 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
     InputTextModule,
     BrowserAnimationsModule,
     AutoCompleteModule,
-    FormsModule
+    FormsModule,
+    MenubarModule,
+
   ],
   providers: [],
-  bootstrap: [AppComponent]
 })
 export class AppModule { }

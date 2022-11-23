@@ -15,22 +15,14 @@ export class AppComponent implements OnInit {
   imgHero: string="";
   sizeImg: string= "standard_fantastic";
 
+  items!: any[]
 
   constructor(private service: ServiceService) { }
 
 
   ngOnInit(): void {
-    // this.teste();
+    this.items=[];
   }
-
-  // teste() {
-  //   this.service.getMusic().subscribe(
-  //     (result) => {
-  //       console.log(result)
-  //      },
-  //     (error) => { },
-  //   )
-  // }
 
   searchHero(event:any) {
     let hero: string;
