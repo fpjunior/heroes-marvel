@@ -1,9 +1,8 @@
 <p-menubar [model]="items">
-  <p-autoComplete [(ngModel)]="text" [showEmptyMessage]="true" (onSelect)="selectHero()"[minLength]="3" field="name" [suggestions]="result" (completeMethod)="searchHero($event)"></p-autoComplete>
+  <img src="/assets/img/Marvel_Logo.svg.png" alt="Logo MARVEL" id="imagem">
+  <p-autoComplete placeholder="Buscar" [(ngModel)]="text" [showEmptyMessage]="true" emptyMessage="Nenhum resultado encontrado" (onSelect)="selectHero()"[minLength]="3" field="name" [suggestions]="result" (completeMethod)="searchHero($event)"></p-autoComplete>
 </p-menubar>
-
 <div>
   <dialog>
-
   </dialog>
 </div>
