@@ -22,4 +22,8 @@ export class ServiceService {
     return this.http.get(`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${heros}&ts=${this.timeStamp}&orderBy=name&limit=10&apikey=${this.publicKey}&hash=${this.hash}`)
   }
 
+  getTranslater(value:string): Observable<any>{
+    return this.http.get(`https://api.mymemory.translated.net/get?q=${value}&langpair=en|pt`)
+  }
+
 }

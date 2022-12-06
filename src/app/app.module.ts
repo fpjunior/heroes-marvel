@@ -9,13 +9,11 @@ import { InputTextModule } from 'primeng/inputtext';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { AutoCompleteModule } from 'primeng/autocomplete';
-import {MenubarModule} from 'primeng/menubar';
+import { MenubarModule } from 'primeng/menubar';
 
 @NgModule({
   bootstrap: [ AppComponent ],
-  declarations: [
-    AppComponent
-  ],
+  declarations: [ AppComponent ],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -27,8 +25,10 @@ import {MenubarModule} from 'primeng/menubar';
     AutoCompleteModule,
     FormsModule,
     MenubarModule,
-
   ],
+
   providers: [],
 })
-export class AppModule { }
+export class AppModule {
+
+}
