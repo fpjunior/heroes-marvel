@@ -35,6 +35,16 @@ export class AppComponent implements OnInit {
     )
   }
 
+  translaterText(value:string){
+    this.service.getTranslater(value).subscribe(
+      (result:any) => {
+        this.heroDescription= result.responseData.translatedText
+      },
+      (error) => { alert('Error')},
+      )
+
+  }
+
   selectHero(){
     let cont=0;
     let img;
@@ -54,7 +64,7 @@ export class AppComponent implements OnInit {
     console.log(this.heroName);
     console.log(this.heroDescription);
     console.log(this.imgHero);
+    this.translaterText(this.heroDescription);
   }
-
 
 }
