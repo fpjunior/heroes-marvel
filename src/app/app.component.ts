@@ -39,7 +39,8 @@ export class AppComponent implements OnInit {
   translaterText(value:string){
     this.service.getTranslater(value).subscribe(
       (result:any) => {
-        if (this.heroDescription === "" || "" !== "" || "" !="") {
+        if (this.heroDescription === "" || this.heroDescription === null ||
+        this.heroDescription === undefined) {
           this.heroDescription = "Este Herói não possui descrição!"
         } else {
           this.heroDescription= result.responseData.translatedText
