@@ -7,3 +7,11 @@
   left: 10px;
   display: flex;
 }
+
+::ng-deep{
+  input.p-element.ng-tns-c53-0.p-autocomplete-input.p-inputtext.p-component.ng-star-inserted {
+    width: 20rem !important;
+  }
+}
+
+

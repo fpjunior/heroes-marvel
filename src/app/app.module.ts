@@ -14,9 +14,7 @@ import {PanelModule} from 'primeng/panel';
 
 @NgModule({
   bootstrap: [ AppComponent ],
-  declarations: [
-    AppComponent
-  ],
+  declarations: [ AppComponent ],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -31,6 +29,9 @@ import {PanelModule} from 'primeng/panel';
     PanelModule,
 
   ],
+
   providers: [],
 })
-export class AppModule { }
+export class AppModule {
+
+}
