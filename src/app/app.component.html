@@ -6,8 +6,9 @@
 </p-menubar>
 <div>
 </div>
-<span>
-  {{ heroDescription }}
-</span>
-
+<div *ngIf="heroName">
+  <p-panel [header]="heroName">
+    <p>{{heroDescription}}</p>
+</p-panel>
+</div>
 

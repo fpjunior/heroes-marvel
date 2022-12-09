@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
   heroDescription: string="";
   imgHero: string="";
   sizeImg: string= "standard_fantastic";
+  descriptionName: string="";
 
   items!: any[]
 
@@ -61,7 +62,6 @@ export class AppComponent implements OnInit {
     img= this.result[cont].thumbnail.path;
     extension= this.result[cont].thumbnail.extension;
     this.imgHero= img + '/' + this.sizeImg + '.' + extension;
-    console.log(this.heroName);
     console.log(this.heroDescription);
     console.log(this.imgHero);
     this.translaterText(this.heroDescription);
