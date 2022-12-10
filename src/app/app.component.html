@@ -7,8 +7,12 @@
 <div>
 </div>
 <div *ngIf="heroName">
-  <p-panel [header]="heroName">
-    <p>{{heroDescription}}</p>
-</p-panel>
+  <div class="infoHero">
+    <img [src]="imgHero">
+    <p-panel [header]="heroName">
+      <p>{{heroDescription}}</p>
+    </p-panel>
+  </div>
+ 
 </div>
 
