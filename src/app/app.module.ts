@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import {MenubarModule} from 'primeng/menubar';
 import {PanelModule} from 'primeng/panel';
+import {CarouselModule} from 'primeng/carousel';
+
 
 @NgModule({
   bootstrap: [ AppComponent ],
@@ -27,6 +29,7 @@ import {PanelModule} from 'primeng/panel';
     FormsModule,
     MenubarModule,
     PanelModule,
+    CarouselModule,
 
   ],
 

@@ -15,8 +15,11 @@ export class AppComponent implements OnInit {
   imgHero: string="";
   sizeImg: string= "standard_fantastic";
   descriptionName: string="";
+  carouselModule: string="";
 
-  items!: any[]
+
+  items!: any[];
+  imagesHeroe!: any[]
 
   constructor(private service: ServiceService) { }
 
@@ -30,7 +33,16 @@ export class AppComponent implements OnInit {
     hero= event.query;
     this.service.getSearchHeros(hero).subscribe(
       (result) => {
+        debugger
         this.result= result.data.results;
+        this.imagesHeroe = this.result.map((e: any) =>{
+          let a = {
+              name: e.name,
+                path: `${e.thumbnail.path}/standard_fantastic.${e.thumbnail.extension}`
+          }
+          return a
+
+      })
        },
       (error) => { },
     )
