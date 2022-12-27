@@ -1,11 +1,14 @@
 <script src = "caminho/para/angular-translate.js" ></script>
 
+<body class="bg" >
 <p-menubar [model]="items">
   <img src="/assets/img/Marvel_Logo.svg.png" alt="Logo MARVEL" id="imagem">
 <p-autoComplete [(ngModel)]="text" placeholder="Buscar" [showEmptyMessage]="true" emptyMessage="Nenhum resultado encontrado" (onSelect)="selectHero()"[minLength]="3" field="name" [suggestions]="result" (completeMethod)="searchHero($event)"></p-autoComplete>
 </p-menubar>
-<div>
-</div>
+
+  <img src="/assets/img/marvel2_.png" alt="Marvel">
+
+
 <div *ngIf="heroName">
   <div class="infoHero">
     <img [src]="imgHero">
@@ -13,6 +16,6 @@
       <p>{{heroDescription}}</p>
     </p-panel>
   </div>
-
 </div>
+</body>
 
